@@ -13,7 +13,8 @@ public class CoutingNumbers {
     public CoutingNumbers(Integer number) {
         this.number = number;
     }
-    public int userOutput(){
+
+    public int countingTheUserDefinedVariable() {
         if (coutingNumberFromUser() > 9) {
             number = coutingNumberFromUser();
             coutingNumberFromUser();
@@ -22,13 +23,13 @@ public class CoutingNumbers {
 
     }
 
-    private int coutingNumberFromUser() {
+    public int coutingNumberFromUser() {
         String numbConvert = String.valueOf(number);
         int last_value = (String.valueOf(numbConvert).length() - 1);
-        int count = 0;
+        int countTemporaryVarible = 0;
         for (int i = 0; i <= last_value; i++) {
-            count += Integer.parseInt(String.valueOf(numbConvert.charAt(i)));
+            countTemporaryVarible += Integer.parseInt(String.valueOf(numbConvert.charAt(i)));
         }
-        return count;
+        return countTemporaryVarible;
     }
 }
